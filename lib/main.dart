@@ -10,14 +10,87 @@ class MyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          title: Text('Bitel',
+              style: TextStyle(color: Colors.black, fontSize: 22.0)),
+          backgroundColor: Colors.yellow,
+          centerTitle: true,
+        ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
                 radius: 50.0,
                 backgroundColor: Colors.white,
-                backgroundImage: NetworkImage('https://lh3.googleusercontent.com/JECdtjj3CE6Rt3E3EYW4X7lbkpqi7mMGlVDkljf3l76Bh8H4qhlwSgz8YvW_BLXD1Blfz80B2NwbP24cZX1A2aWfFIixNooOOKnjiB4dGCmRV-fml5tz=w1280'),
+                backgroundImage: NetworkImage(
+                    'https://avatars2.githubusercontent.com/u/12468902?s=460&u=af12dd749e68b45862f389cd57bc7da901ab24e6&v=4'),
+              ),
+              Text(
+                'Abel Tarazona',
+                style: TextStyle(
+                    fontSize: 30.0,
+                    fontFamily: 'Pacifico',
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0,
+                    letterSpacing: 2.5),
+              ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.black,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '970080498',
+                    style:
+                        TextStyle(color: Colors.teal.shade900, fontSize: 20.0),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'abel.tarazona@bitel.com.pe',
+                    style:
+                        TextStyle(color: Colors.teal.shade900, fontSize: 20.0),
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.map,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'Perú',
+                    style:
+                        TextStyle(color: Colors.teal.shade900, fontSize: 20.0),
+                  ),
+                ),
               ),
             ],
           ),
